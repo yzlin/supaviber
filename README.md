@@ -15,9 +15,35 @@ SupaViber provides a structured way to organize and share:
 
 Whether you're setting up a new machine or sharing your workflows with a team, SupaViber makes it easy to package and deploy your development environment.
 
+## Included Skills
+
+SupaViber comes with built-in skills ready to use:
+
+### Git Safety
+**`git-safety`** - Comprehensive git safety protocols for collaborative environments
+
+- 🛡️ Prevents destructive operations (hard resets, force pushes) without explicit approval
+- 🚫 Protects environment files (.env) from accidental modification
+- ⚠️ Enforces safe commit practices with verification checklists
+- 🤝 Coordinates file deletions and changes in team environments
+- ✅ Ensures explicit file paths and atomic commits
+
+Claude automatically applies these safety protocols when working with git commands and file operations.
+
 ## Installation
 
+### Install from Marketplace (Recommended)
+
+Add the SupaViber marketplace and install the plugin:
+
+```bash
+/plugin marketplace add yzlin/supaviber
+/plugin install supaviber@supaviber-marketplace
+```
+
 ### Install from GitHub
+
+Direct installation without marketplace:
 
 ```bash
 claude plugin install https://github.com/yzlin/supaviber

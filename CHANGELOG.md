@@ -7,9 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- Initial plugin structure
-- Directory structure for skills, agents, commands, and hooks
-- Documentation templates for easy contribution
+- Marketplace configuration (marketplace.json)
+- Support for `/plugin marketplace add` installation
+- Git safety skill with comprehensive protocols
+- Updated documentation with marketplace installation
 
 ## [0.1.0] - 2025-12-27
 ### Added
