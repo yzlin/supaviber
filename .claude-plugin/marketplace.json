@@ -11,7 +11,7 @@
   "plugins": [
     {
       "name": "supaviber",
-      "source": ".",
+      "source": "./",
       "description": "Personal vibe coding toolkit - custom skills, agents, and commands for an optimized development environment",
       "version": "0.1.0",
       "author": {
