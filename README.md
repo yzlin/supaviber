@@ -30,6 +30,18 @@ SupaViber comes with built-in skills ready to use:
 
 Claude automatically applies these safety protocols when working with git commands and file operations.
 
+### Coding Standards
+**`coding-standards`** - Guide for writing clean, maintainable code following industry best practices
+
+- 🎯 Applies SOLID principles and design patterns (DRY, composition over inheritance)
+- 📏 Enforces single responsibility and clear function boundaries
+- 🏗️ Promotes testable, extensible code architecture
+- 📝 Ensures meaningful naming conventions and documentation
+- ✨ Includes self-review checklist and refactoring guidance
+- 🌐 Language-specific best practices for Python, TypeScript, Java, Go, Rust
+
+Claude uses this skill when writing or reviewing code to ensure consistency, readability, and long-term maintainability.
+
 ## Installation
 
 ### Install from Marketplace (Recommended)

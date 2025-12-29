@@ -10,7 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Marketplace configuration (marketplace.json)
 - Support for `/plugin marketplace add` installation
 - Git safety skill with comprehensive protocols
-- Updated documentation with marketplace installation
+- Coding standards skill with SOLID principles and best practices
+- Updated documentation with marketplace installation and skill descriptions
 
 ## [0.1.0] - 2025-12-27
 ### Added
