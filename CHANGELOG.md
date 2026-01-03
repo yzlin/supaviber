@@ -7,6 +7,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-01-03
+### Added
+- OpenAI Codex compatibility - skills now follow Agent Skills open standard
+- Dual platform support (Claude Code + OpenAI Codex)
+- `compatibility` and `metadata` frontmatter fields to all skills
+- `references/` subdirectory support for on-demand documentation
+- Skill validation script (`scripts/validate-skills.sh`)
+- GitHub Actions workflow for automated skill validation
+- `CONTRIBUTING.md` with comprehensive skill creation guidelines
+- Pre-commit hook for skill validation (optional, via `hooks/hooks.json`)
+- Skill template (`.templates/skill-template/SKILL.md`)
+- Interactive skill generator (`scripts/create-skill.sh`)
+- Metadata conventions documentation (`docs/METADATA-CONVENTIONS.md`)
+
+### Changed
+- Refactored `coding-standards` skill to use references/ directory (786 → 525 lines)
+- Updated `git-safety` skill with full metadata (license, compatibility, metadata)
+- Enhanced README with dual compatibility documentation
+- Updated all documentation to reference Agent Skills specification
+
+### Improved
+- Skills now validated against agent skills specification
+- Better organization with scripts/, references/, assets/ directories support
+- Cross-platform compatibility documentation
+- Reduced skill file sizes for better context efficiency
+
 ## [0.2.0] - 2025-12-29
 ### Added
 - Marketplace configuration (marketplace.json)

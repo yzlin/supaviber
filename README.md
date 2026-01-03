@@ -15,12 +15,47 @@ SupaViber provides a structured way to organize and share:
 
 Whether you're setting up a new machine or sharing your workflows with a team, SupaViber makes it easy to package and deploy your development environment.
 
+## Dual Compatibility: Claude Code + OpenAI Codex
+
+SupaViber skills follow the [Agent Skills open standard](https://agentskills.io), making them **fully compatible** with both:
+
+- **Claude Code** - Anthropic's AI coding assistant
+- **OpenAI Codex** - OpenAI's developer CLI
+
+Write skills once, use them everywhere. All SupaViber skills are validated against the agent skills specification to ensure cross-platform compatibility.
+
+### Using SupaViber with Codex
+
+In OpenAI Codex, skills can be:
+- **User-scoped**: `~/.codex/skills/` (available globally)
+- **Repo-scoped**: `.codex/skills/` (project-specific)
+
+**Install all skills for Codex:**
+
+```bash
+# Link skills (recommended - stays in sync)
+mkdir -p ~/.codex/skills
+for skill in /path/to/supaviber/skills/*/; do
+  skill_name=$(basename "$skill")
+  if [ -f "$skill/SKILL.md" ]; then
+    ln -s "$skill" ~/.codex/skills/"$skill_name"
+  fi
+done
+
+# Or copy skills
+cp -r /path/to/supaviber/skills/* ~/.codex/skills/
+```
+
+Codex will automatically discover and use these skills based on context.
+
 ## Included Skills
 
 SupaViber comes with built-in skills ready to use:
 
 ### Git Safety
 **`git-safety`** - Comprehensive git safety protocols for collaborative environments
+
+✓ Compatible with Claude Code and OpenAI Codex
 
 - 🛡️ Prevents destructive operations (hard resets, force pushes) without explicit approval
 - 🚫 Protects environment files (.env) from accidental modification
@@ -32,6 +67,8 @@ Claude automatically applies these safety protocols when working with git comman
 
 ### Coding Standards
 **`coding-standards`** - Guide for writing clean, maintainable code following industry best practices
+
+✓ Compatible with Claude Code and OpenAI Codex
 
 - 🎯 Applies SOLID principles and design patterns (DRY, composition over inheritance)
 - 📏 Enforces single responsibility and clear function boundaries
@@ -199,6 +236,23 @@ Load the plugin in development mode:
 cd supaviber
 claude --plugin-dir .
 ```
+
+### Validating Skills
+
+Ensure skills comply with the agent skills specification:
+
+```bash
+# Install validator (one-time)
+npm install -g @agentskills/skills-ref
+
+# Validate all skills
+./scripts/validate-skills.sh
+
+# Validate a specific skill
+skills-ref validate ./skills/git-safety
+```
+
+All skills are automatically validated against the [Agent Skills specification](https://agentskills.io/specification) to ensure cross-platform compatibility.
 
 ### Project Structure
 

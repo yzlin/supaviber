@@ -1,6 +1,12 @@
 ---
 name: git-safety
 description: Apply critical git safety protocols before any git operations, especially in collaborative environments. Use when performing git commands, managing files, or making destructive changes.
+license: MIT
+compatibility: Works with Claude Code and OpenAI Codex. Requires git CLI access.
+metadata:
+  category: version-control
+  tags: git, safety, collaboration, destructive-operations
+  version: "1.0.0"
 ---
 
 # Git Safety Skill

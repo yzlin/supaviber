@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash.*git commit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/validate-skills.sh",
+            "description": "Validate skills before committing"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+name: Validate Skills
+
+on:
+  push:
+    paths:
+      - 'skills/**'
+  pull_request:
+    paths:
+      - 'skills/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install skills-ref validator
+        run: npm install -g @agentskills/skills-ref
+
+      - name: Validate skills
+        run: ./scripts/validate-skills.sh

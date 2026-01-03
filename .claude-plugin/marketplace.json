@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "SupaViber - Personal vibe coding toolkit with custom skills, agents, and commands for an optimized development environment",
-    "version": "0.2.0"
+    "version": "0.3.0"
   },
   "plugins": [
     {
       "name": "supaviber",
       "source": "./",
       "description": "Personal vibe coding toolkit - custom skills, agents, and commands for an optimized development environment",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "author": {
         "name": "Ethan Lin",
         "url": "https://github.com/yzlin"
