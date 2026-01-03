@@ -20,5 +20,18 @@ dist/
 build/
 node_modules/
 
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+uv.lock
+
 # Claude local settings (if any)
 .claude/settings.local.json

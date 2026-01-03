@@ -109,7 +109,7 @@ All metadata fields are optional but recommended for better skill discovery and 
 
 Validate your metadata:
 ```bash
-skills-ref validate ./skills/your-skill
+uv run skills-ref validate ./skills/your-skill
 ```
 
 ## Best Practices

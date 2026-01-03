@@ -18,12 +18,27 @@ echo "Validating SupaViber skills against agent skills specification..."
 echo "Skills directory: $SKILLS_DIR"
 echo ""
 
-# Check if skills-ref is installed
-if ! command -v skills-ref &> /dev/null; then
-    echo -e "${YELLOW}Warning: skills-ref validator not found.${NC}"
-    echo "Install with: npm install -g @agentskills/skills-ref"
-    echo "Skipping validation..."
-    exit 0
+# Ensure uv is installed
+if ! command -v uv &> /dev/null; then
+    echo -e "${RED}Error: uv is not installed.${NC}"
+    echo "Install with: curl -LsSf https://astral.sh/uv/install.sh | sh"
+    exit 1
+fi
+
+# Install dependencies if needed
+if [ ! -d "$PROJECT_ROOT/.venv" ]; then
+    echo -e "${YELLOW}Installing dependencies...${NC}"
+    cd "$PROJECT_ROOT"
+    uv sync
+    echo ""
+fi
+
+# Activate virtual environment and check for skills-ref
+SKILLS_REF_CMD="$PROJECT_ROOT/.venv/bin/skills-ref"
+if [ ! -f "$SKILLS_REF_CMD" ]; then
+    echo -e "${RED}Error: skills-ref not found in virtual environment.${NC}"
+    echo "Run: uv sync"
+    exit 1
 fi
 
 # Track validation results
@@ -45,7 +60,7 @@ for skill_dir in "$SKILLS_DIR"/*/; do
         echo -e "Validating skill: ${YELLOW}$skill_name${NC}"
 
         # Run skills-ref validation
-        if skills-ref validate "$skill_dir" 2>&1; then
+        if "$SKILLS_REF_CMD" validate "$skill_dir" 2>&1; then
             echo -e "${GREEN}✓ $skill_name passed validation${NC}"
             PASSED_SKILLS=$((PASSED_SKILLS + 1))
         else

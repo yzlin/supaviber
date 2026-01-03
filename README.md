@@ -242,14 +242,14 @@ claude --plugin-dir .
 Ensure skills comply with the agent skills specification:
 
 ```bash
-# Install validator (one-time)
-npm install -g @agentskills/skills-ref
+# Install dependencies (one-time)
+uv sync
 
 # Validate all skills
 ./scripts/validate-skills.sh
 
 # Validate a specific skill
-skills-ref validate ./skills/git-safety
+uv run skills-ref validate ./skills/git-safety
 ```
 
 All skills are automatically validated against the [Agent Skills specification](https://agentskills.io/specification) to ensure cross-platform compatibility.

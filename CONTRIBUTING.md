@@ -89,11 +89,11 @@ For detailed examples, see [references/EXAMPLES.md](references/EXAMPLES.md).
 Before submitting:
 
 ```bash
-# Install validator (one-time)
-npm install -g @agentskills/skills-ref
+# Install dependencies (one-time)
+uv sync
 
 # Validate your skill
-skills-ref validate ./skills/your-skill-name
+uv run skills-ref validate ./skills/your-skill-name
 
 # Or validate all skills
 ./scripts/validate-skills.sh
@@ -206,7 +206,7 @@ Before requesting review, ensure:
 - [ ] Main SKILL.md is under 500 lines
 - [ ] Long content moved to `references/`
 - [ ] Scripts are executable and documented
-- [ ] Skill passes `skills-ref validate`
+- [ ] Skill passes `uv run skills-ref validate`
 - [ ] Tested with Claude Code
 - [ ] Tested with OpenAI Codex (if available)
 - [ ] README updated if adding new category
