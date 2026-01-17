@@ -1,0 +1,31 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "assist": {
+    "actions": {
+      "source": {
+        "useSortedAttributes": "off",
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [
+              [":NODE:", ":BUN:"],
+              ":BLANK_LINE:",
+              [":PACKAGE:", ":PACKAGE_WITH_PROTOCOL:"],
+              ":BLANK_LINE:",
+              ":ALIAS:",
+              ":BLANK_LINE:",
+              ":PATH:",
+              ":BLANK_LINE:",
+              "**",
+            ],
+          },
+        },
+      },
+    },
+  },
+  "linter": {
+    "includes": ["scripts", "!**/node_modules"],
+    "enabled": true,
+  },
+  "extends": ["ultracite/core"],
+}
