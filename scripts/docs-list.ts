@@ -5,12 +5,9 @@
  */
 
 import { readdirSync, readFileSync } from "node:fs";
-import { dirname, join, relative } from "node:path";
-import { fileURLToPath } from "node:url";
+import { join, relative } from "node:path";
 
-const docsListFile = fileURLToPath(import.meta.url);
-const docsListDir = dirname(docsListFile);
-const DOCS_DIR = join(docsListDir, "..", "docs");
+const DOCS_DIR = join(process.cwd(), "docs");
 
 const EXCLUDED_DIRS = new Set(["archive", "research"]);
 
