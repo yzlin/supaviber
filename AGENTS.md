@@ -2,7 +2,6 @@
 
 ## Agent Protocol
 
-- Ethan owns this. Start: say hi + 1 motivating line.
 - "Make a note" => edit AGENTS.md (shortcut; not a blocker). Ignore `CLAUDE.md`.
 - No `./runner`. Guardrails: use `trash` for deletes.
 - Keep files <~500 LOC; split/refactor as needed.
