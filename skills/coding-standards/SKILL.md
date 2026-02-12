@@ -2,7 +2,7 @@
 name: coding-standards
 description: Guide for writing clean, maintainable code following industry best practices and design principles like DRY, SOLID, and composition patterns. Use when writing any code to ensure consistency, readability, and long-term maintainability across all programming languages.
 license: MIT
-compatibility: Works with Claude Code and OpenAI Codex. Language-agnostic with specific guidance for Python, TypeScript, Java, Go, Rust.
+compatibility: Language-agnostic with specific guidance for Python, TypeScript, Java, Go, Rust.
 metadata:
   category: code-quality
   tags: clean-code, SOLID, DRY, best-practices, design-patterns
