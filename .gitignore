@@ -31,7 +31,6 @@ __pycache__/
 *.egg-info/
 .pytest_cache/
 .mypy_cache/
-uv.lock
 
 # Claude local settings (if any)
 .claude/settings.local.json
