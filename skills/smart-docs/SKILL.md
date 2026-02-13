@@ -32,6 +32,7 @@ This skill is derived from the upstream `deepwiki-rs` skill by `sopaco`: https:/
 3. **C4 Model**: Structure documentation following C4 model levels
 4. **Mermaid Diagrams**: Use Mermaid for all visualizations
 5. **Markdown Output**: Generate well-structured markdown files
+6. **Front Matter Info**: Front matter info is required for each generated document file
 
 ## Workflow
 
